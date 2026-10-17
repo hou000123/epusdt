@@ -24,5 +24,4 @@ RUN if [ -n "$API_RATE_URL" ]; then \
     fi
 COPY --from=builder /app/epusdt .
 
-VOLUME /app/conf
 ENTRYPOINT ["./epusdt", "http", "start"]
